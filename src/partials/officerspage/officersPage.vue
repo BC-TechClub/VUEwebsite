@@ -24,10 +24,10 @@ export default{
 
 <template>
   <VRow style="background-color: white">
-    <VCol cols="5">
+    <VCol cols="5" md="12">
       <AboutUs/>
     </VCol>
-    <VCol cols="7">
+    <VCol cols="7" md="12">
       <VRow>
       <VCol
         v-for="(officer, index) in officers"
