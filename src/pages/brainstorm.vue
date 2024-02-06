@@ -15,16 +15,20 @@
               <img :src="Lighting" class="static-image" style="width: 300px; height: 200px;"/>
             </div>
           </VCol>
-          <aos-vue animation="fade">
-          <div class="d-flex justify-center text-fade">
-            <div class="image container align-center">
-              <p class="align-center" style="font-family: 'League Spartan', sans-serif; font-weight: bolder; color: white; display: block; text-align: center">LEARN MORE</p>
-              <img :src="ScrollDown" class="scroll-down"/>
+            <div class="position-absolute bottom-0 start-50 translate-middle-x px-3 py-2 d-flex flex-column justify-content-center my-3" id="about_scroll" style="opacity: 1;">
+              <small class="color-3">
+                <strong>Learn More</strong>
+              </small>
+              <i class="bi bi-chevron-double-down d-flex justify-content-center color-3"></i>
             </div>
-          </div>
-          </aos-vue>
+<!--          <div class="d-flex justify-center text-fade">-->
+<!--            <div class="image container align-center">-->
+<!--              <p class="align-center" style="font-family: 'League Spartan', sans-serif; font-weight: bolder; color: white; display: block; text-align: center">LEARN MORE</p>-->
+<!--              <img :src="ScrollDown" class="scroll-down"/>-->
+<!--            </div>-->
+<!--          </div>-->
         </VRow>
-
+        <VBtn color="white">Test</VBtn>
       </div>
     </div>
   </section>
@@ -58,6 +62,19 @@ const click = ref(false)
   transition: transform 0.3s ease;
 }
 
+#about_scroll{
+  transition-duration: 0.5s;
+  background-color: transparent;
+  border-radius: 30px;
+  color: white;
+}
+
+#about_scroll:hover{
+  background-color: rgba($color3, 0.2);
+  cursor: pointer;
+  background-color: #FF90C2;
+}
+
 @keyframes bobbing {
   0%, 100% {
     transform: translateY(0);
@@ -73,7 +90,7 @@ const click = ref(false)
 
 .scroll-down {
   height: 10px;
-  width: 10 px;
+  width: 10px;
   display: block;
   margin: auto;
 
